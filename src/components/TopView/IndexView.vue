@@ -3,22 +3,22 @@
     <el-row :gutter="20">
       <el-col :span="6">
         <el-card shadow="hover">
-          鼠标悬浮
+          <total-sales />
         </el-card>
       </el-col>
       <el-col :span="6">
         <el-card shadow="hover">
-          鼠标悬浮
+          <total-orders />
         </el-card>
       </el-col>
       <el-col :span="6">
         <el-card shadow="hover">
-          鼠标悬浮
+          <today-users />
         </el-card>
       </el-col>
       <el-col :span="6">
         <el-card shadow="hover">
-          鼠标悬浮
+          <total-users />
         </el-card>
       </el-col>
     </el-row>
@@ -26,9 +26,18 @@
 </template>
 
 <script>
-export default {
-
-}
+  import TotalSales from '../TotalSales/IndexView'
+  import TotalOrders from '../TotalOrders/IndexView'
+  import TodayUsers from '../TodayUsers/IndexView'
+  import TotalUsers from '../TotalUsers/IndexView'
+  export default {
+    components: {
+      TotalSales,
+      TotalOrders,
+      TodayUsers,
+      TotalUsers
+    }
+  }
 </script>
 
 <style lang="scss" scoped>
