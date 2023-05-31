@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import BMapView from '../components/BMapScatter/BMapView.vue'
 import BMap2Mode from '../components/BMapScatter/BMap2View.vue'
-import WordCloud from '../views/WordCloudView'
+import WordCloud from '../components/WordCloud/WordCloudView'
 
 Vue.use(VueRouter)
 
