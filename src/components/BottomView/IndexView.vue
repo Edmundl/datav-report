@@ -229,7 +229,8 @@ export default {
         (page - 1) * this.pageSize,
         (page - 1) * this.pageSize + this.pageSize
       )
-    }
+    },
+    renderLineChart () {}
   },
   mounted () {
     this.renderPieChart()
