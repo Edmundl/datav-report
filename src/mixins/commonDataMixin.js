@@ -85,6 +85,32 @@ export default {
     },
     userGrowthLastMonth () {
       return wrapperNumber(this.reportData, 'userGrowthLastMonth')
+    },
+    orderFullYear () {
+      return wrapperArray(this.reportData, 'orderFullYear')
+    },
+    orderFullYearAxis () {
+      return wrapperArray(this.reportData, 'orderFullYearAxis')
+    },
+    orderRank () {
+      return wrapperArray(this.reportData, 'orderRank')
+    },
+    userFullYear () {
+      return wrapperArray(this.reportData, 'userFullYear')
+    },
+    userFullYearAxis () {
+      return wrapperArray(this.reportData, 'userFullYearAxis')
+    },
+    userRank () {
+      return wrapperArray(this.reportData, 'userRank')
+    },
+    wordCloud () {
+      return this.getWordCloud()
+    }
+  },
+  filters: {
+    format (v) {
+      return format(v)
     }
   },
   // 接收由上上层组件传递过来的数据
