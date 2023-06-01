@@ -16,7 +16,7 @@ const service = axios.create({
 service.interceptors.response.use(
   response => {
     if (response.status === 200 && response.data) {
-      console.log(response.data)
+      // console.log(response.data)
       return response.data
     } else {
       return Promise.reject(new Error('请求失败'))

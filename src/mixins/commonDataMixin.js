@@ -13,6 +13,18 @@ function format (v) {
   return `${v}`.replace(reg, '$&,')
 }
 
+function wrapperObject (o, k) {
+  if (o && k.indexOf('.') >= 0) {
+    const keys = k.split('.')
+    keys.forEach(key => {
+      o = o[key]
+    })
+    return o
+  } else {
+    return o && o[k] ? o[k] : {}
+  }
+}
+
 function wrapperArray (o, k) {
   return o && o[k] ? o[k] : []
 }
@@ -106,6 +118,15 @@ export default {
     },
     wordCloud () {
       return this.getWordCloud()
+    },
+    category1 () {
+      return wrapperObject(this.reportData, 'category.data1')
+    },
+    category2 () {
+      return wrapperObject(this.reportData, 'category.data2')
+    },
+    mapData () {
+      return this.getMapData()
     }
   },
   filters: {
